@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://blog.dumbrava.ca/</loc>
+    <lastmod>2023-05-01T20:32:55-04:00</lastmod>
+  </url><url>
+    <loc>https://blog.dumbrava.ca/posts/</loc>
+    <lastmod>2023-05-01T20:32:55-04:00</lastmod>
+  </url><url>
+    <loc>https://blog.dumbrava.ca/posts/powering-on-monitors-with-ddcutil/</loc>
+    <lastmod>2023-05-01T20:32:55-04:00</lastmod>
+  </url><url>
+    <loc>https://blog.dumbrava.ca/series/</loc>
+  </url><url>
+    <loc>https://blog.dumbrava.ca/tags/</loc>
+  </url>
+</urlset>

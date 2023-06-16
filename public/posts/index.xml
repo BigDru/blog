@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Dumbrava Tech</title>
+    <link>https://blog.dumbrava.ca/posts/</link>
+    <description>Recent content in Posts on Dumbrava Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 May 2023 20:32:55 -0400</lastBuildDate><atom:link href="https://blog.dumbrava.ca/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Powering on Monitors with ddcutil</title>
+      <link>https://blog.dumbrava.ca/posts/powering-on-monitors-with-ddcutil/</link>
+      <pubDate>Mon, 01 May 2023 20:32:55 -0400</pubDate>
+      
+      <guid>https://blog.dumbrava.ca/posts/powering-on-monitors-with-ddcutil/</guid>
+      <description>Problem: I have 4 monitors. Two of them are ASUS monitors (VS239) that are stacked one above the other on my left side. The issue I’m having is that these two monitors don’t wakeup when I power on my computer.
+Exploration: Let’s begin by asking ChatGPT for a solution. It recommended I use ddcutil. The rest of the recommendations didn’t work too well but it gave us a nice starting point.</description>
+    </item>
+    
+  </channel>
+</rss>
