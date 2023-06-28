@@ -3,9 +3,10 @@ title: "Powering on Monitors with ddcutil"
 date: 2023-05-01T20:32:55-04:00
 ---
 
-# Problem:
+## Problem
 I have 4 monitors. Two of them are ASUS monitors (VS239) that are stacked one above the other on my left side. The issue I’m having is that these two monitors don’t wakeup when I power on my computer.
-# Exploration:
+
+## Exploration
 Let’s begin by asking ChatGPT for a solution. It recommended I use `ddcutil`. The rest of the recommendations didn’t work too well but it gave us a nice starting point.
 
 First let’s install `ddcutil`:
@@ -29,7 +30,7 @@ sudo ddcutil detect
 
 Then we get the following output:
 
-```output
+```text
 Display 1
 I2C bus: /dev/i2c-4
 DRM connector: card0-DP-3
@@ -115,7 +116,7 @@ sudo ddcutil -n DCLMTF166938 getvcp known
 
 The output is as follows:
 
-```output
+```text
 VCP code 0x02 (New control value ): One or more new control values have been saved (0x02)
 VCP code 0x0b (Color temperature increment ): 50 degree(s) Kelvin
 VCP code 0x0c (Color temperature request ): 3000 + 70 * (feature 0B color temp increment) degree(s) Kelvin
@@ -149,11 +150,11 @@ VCP code 0xdf (VCP Version ): 2.1
 
 The VCP code of interest is 0xd6. I couldn’t find a command to tell me what values are acceptible for this register so I asked chatGPT. It was convinced 0x01 was the value needed to bring the monitor to an ON state. So I gave it a try and it worked!
 
-# Solution
+## Solution
 
 Now that we have all the pieces so let’s put it all together. First I made a bash script that I can run as sudo to power on the monitors whenever I want:
 
-```bash
+```bash {linenos=table}
 #!/bin/bash
 modprobe i2c-dev
 
@@ -165,7 +166,7 @@ Running this script powers on my monitors as intended. ChatGPT suggested adding 
 
 The final part is to call the script when the computer boots. Let’s create a service file at `/etc/systemd/system/start-asus-monitors.service`:
 
-```service
+```service {linenos=table}
 [Unit]
 Description=Wake up ASUS monitors on boot
 
@@ -185,6 +186,6 @@ sudo systemctl enable start-asus-monitors
 
 Reboot to test and we're done!
 
-# Notes for the future:
+## Notes for the future
 
 I tried setting up an additional service that triggers after `sleep.target` but it would wake up my computer immediately after I put it to sleep and then leave the computer in an unstable state. In the future, it would be nice if I could figure out a way to trigger the script when the desktop loads / becomes visible (on boot and on wakeup). This would allow me to wake up the monitors automatically even if I put the computer to sleep. For now I’ll settle with calling the shell script we created earlier. If you have any ideas for how to approach this problem feel free to comment below!
