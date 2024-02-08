@@ -1,4 +1,4 @@
-baseURL = 'https://blog.dumbrava.ca/'
+baseURL = 'http://blog.dumbrava.ca/'
 languageCode = 'en-us'
 title = 'Dumbrava Tech'
 theme = 'poison'
@@ -101,3 +101,6 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
     noHl = false
     style = 'nord'
     tabWidth = 4
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
