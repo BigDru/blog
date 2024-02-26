@@ -19,7 +19,7 @@ export TERM=xterm-256color
 ssh olimex
 ```
 
-This would be my default approach but ChatGPT made the suggestion of putting it in an alias in my `~/.bashrc`. I don't know why, but this is something I never considered. And to be honest, I quite like it. For scripts that are extremely small it makes sense to have an alias instead of a full blown script in my custom bin folder. 
+This would be my default approach but ChatGPT made the suggestion of putting it in an alias in my `~/.bashrc`. I don't know why, but this is something I never considered. And to be honest, I quite like it. For scripts that are extremely small it makes sense to have an alias instead of a full blown script in my custom bin folder.
 
 ## Implementing the Solution
 Implementing the solution is as simple as adding this alias to my `~/.bashrc`
