@@ -22,7 +22,7 @@ I found a [blog post](https://aaronluna.dev/blog/add-copy-button-to-code-blocks-
 
 One gotcha I encountered had to do with the hugo.toml settings for syntax highlighting. The [offical website](https://gohugo.io/getting-started/configuration-markup/#highlight) shows the default markup.highlight options:
 
-```markdown
+```toml
 [markup]
   [markup.highlight]
     anchorLineNos = false
@@ -81,6 +81,47 @@ After some investigation I found that Aaron's CSS also modifies the look of the 
 ```
 
 The nord theme specifies that `lntd` is the class for is LineTableTD.
+
+## Adding language tab
+
+Aaron left a comment on his blog post explaining how he added the language tab above his code snippets. His code looks like this:
+
+```css
+.chroma [data-lang]:before {
+    position: absolute;
+    z-index: 0;
+    top: -22px;
+    left: 0px;
+    content: attr(data-lang);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 5px 10px 7px;
+}
+```
+
+This code takes the data-lang attribute and puts it before the .chroma class. To make this look nicely I added 2em top padding to the highlight class and changed the background color to match my nord theme.
+
+## Custom text for the language tab
+
+Next I would like to overwrite the text inserted into the code snippet. Unfortunately, hugo doesn't seem to support passing custom variables into the code fence so I decided to use a workaround for what I wanted to do.
+
+First, I need to include raw HTML in my hugo output. This is disabled by default for security reasons. If you don't know what you're including it could potentially be dangerous.
+
+My site is completely static and the output files are directly copied into a special Google bucket for the purposes of distribution. Additionally my website is versioned with git, so even if some malicious code gets in somehow, I'm quite safe.
+
+To allow unsafe code in the Goldmark renderer I updated my hugo.toml to include:
+
+<!-- test -->
+```toml
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+```
+
+Now that we have custom HTML showing up we can store our custom text in HTML and then use Javascript to swap it in after the page is finished loading. We have several options here.. comments, custom element with specific class specifier
 
 ## Todo
  - It would be nice to have the option to disable the copy button if I so desire

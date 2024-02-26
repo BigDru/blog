@@ -6,7 +6,7 @@
     position: relative;
     z-index: 0;
     padding: 0;
-    margin: 0 0 1em 0;
+    margin: 2em 0 1em 0;
     border-radius: 4px;
     font-size: 0.8em;
 }
@@ -44,6 +44,20 @@
 }
 
 .chroma .lntd:first-child .lnt {
+    background: #2e3440;
+}
+
+.chroma [data-lang]:before {
+    position: absolute;
+    z-index: 0;
+    top: -22px;
+    left: 0px;
+    content: attr(data-lang);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 5px 10px 7px;
     background: #2e3440;
 }
 
