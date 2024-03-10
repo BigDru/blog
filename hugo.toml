@@ -97,9 +97,9 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
     lineNoStart = 1
     lineNos = false
     lineNumbersInTable = true
-    noClasses = false
+    noClasses = false # changed from true
     noHl = false
-    style = 'nord'
+    style = 'nord' # changed from monokai
     tabWidth = 4
   [markup.goldmark]
     [markup.goldmark.renderer]
