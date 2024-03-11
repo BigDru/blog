@@ -108,7 +108,7 @@ This was very interesting since I only have 4 monitors (not 6). My main monitor 
 
 Next we need to figure out the available VCP codes. VCP = Virtual Control Panel and it’s a “feature code” that is used to get or set information from (what I’m guessing) is the monitor’s internal memory registers. Considering we needed to activate a i2c-dev module to run commands via ddcutil, I assume we are somehow talking directly to the microcontroller over I2C.
 
-To select the specific monitor we can use a variety of options (viewable via `ddcutil --help`). I decided to use the ASCII serial number:
+To select the specific monitor we can use a variety of options (viewable via <br>`ddcutil --help`). I decided to use the ASCII serial number:
 
 ```bash
 sudo ddcutil -n DCLMTF166938 getvcp known
@@ -164,7 +164,7 @@ ddcutil -n K6LMTF053243 setvcp 0xd6 0x01
 
 Running this script powers on my monitors as intended. ChatGPT suggested adding a line `i2c-dev to /etc/modules-load.d/modules.conf` to ensure the module is loaded on boot, but if I ever change my monitors, I won’t need that module anymore. I fear that I will forget about it and unnecessarily bloat my computer. So I’m content with loading the module only inside the script.
 
-The final part is to call the script when the computer boots. Let’s create a service file at `/etc/systemd/system/start-asus-monitors.service`:
+The final part is to call the script when the computer boots. Let’s create a service file at <br>`/etc/systemd/system/start-asus-monitors.service`:
 
 ```service {linenos=table}
 [Unit]

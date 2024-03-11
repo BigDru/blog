@@ -67,3 +67,7 @@ function addCopyButtonToDom(button, highlightDiv) {
 document.querySelectorAll(".highlight")
     .forEach(highlightDiv => createCopyButton(highlightDiv));
 
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll(".copy-button")
+        .forEach(b => b.parentNode.removeChild(b));
+})
