@@ -16,39 +16,14 @@ tbody tr td {
     width: 2em;
     text-align: right;
 }
-
-/*
-.chroma .lntd:first-child pre {
-    width: 4em;
-    padding: 1.1em 0.5em 1.1em 0em;
-    text-align: right;
-}
-
-.chroma .lntd:last-child {
-    margin: 0;
-}
-
-.chroma .lntd:last-child pre {
-    margin: 0;
-}
-
-.chroma .lntd:last-child .chroma {
-    padding: 20px 20px 20px 0px;
-    padding: 1.1em 1.1em 1.1em 0em;
-}
-
-.chroma .lntd:first-child code {
-    background: #2e3440 !important;
-}
-
-.chroma .lntd:first-child .lnt {
-    background: #2e3440;
+.code-container {
+    position: static;
 }
 
 .chroma [data-lang]:before {
     position: absolute;
-    z-index: 0;
-    top: -22px;
+    z-index: 1;
+    top: -26px;
     left: 0px;
     content: attr(data-lang);
     border-top-left-radius: 4px;
@@ -58,4 +33,3 @@ tbody tr td {
     padding: 5px 10px 7px;
     background: #2e3440;
 }
-*/
