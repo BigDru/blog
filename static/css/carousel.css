@@ -1,89 +1,100 @@
-/* Carousel Wrapper */
 .carousel-wrapper {
     position: relative;
     width: 100%;
+    max-width: 100%;
     overflow: hidden;
 }
-
 /* Carousel Images */
+.carousel-main-image {
+    position: relative;
+    width: 100%;
+}
+
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
     white-space: nowrap;
 }
-
 .carousel-item {
     min-width: 100%;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
 }
-
-.carousel-item img {
+.carousel-item-inner {
+    position: relative;
     width: 100%;
-    border-radius: 50px;
-    object-fit: cover; /* Ensure images maintain aspect ratio */
-    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+.carousel-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+    margin: auto;
+}
 /* Navigation Arrows */
 .carousel-nav {
     position: absolute;
-    top: 50%;
-    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
-    transform: translateY(-50%);
+    align-items: center;
+    pointer-events: none;
+    padding: 0 10px;
 }
-
 .carousel-nav button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    height: 100%;
+    color: #ABABAB;
     border: none;
-    padding: 10px;
+    padding: 25px;
+    margin: 0;
     cursor: pointer;
-    border-radius: 50%;
-    font-size: 20px;
+    font-size: 30px;
+    pointer-events: auto;
+    z-index: 10;
 }
-
 .carousel-nav button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
 }
-
 /* Preview Bar */
 .carousel-previews {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin: 20px;
     overflow: hidden;
 }
-
 .preview-item {
     margin: 0 5px;
     cursor: pointer;
 }
-
 .preview-item img {
-    opacity: 0.5;
-    object-fit: cover; /* Maintain aspect ratio for preview images */
+    opacity: 0.8;
+    object-fit: cover;
     border-radius: 5px;
+    width: 50px;
+    height: 50px;
 }
-
 .preview-item img.active {
     opacity: 1;
     border: 2px solid #fff;
 }
-
 /* Hide overflowed items */
 .carousel-previews::-webkit-scrollbar {
-    display: none; /* Hides scrollbar */
+    display: none;
 }
-
 .carousel-previews {
-    -ms-overflow-style: none;  /* IE 10+ */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     white-space: nowrap;
-}
-
-.carousel-wrapper {
-    max-width: 100%;
 }

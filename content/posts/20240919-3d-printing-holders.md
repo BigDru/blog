@@ -16,8 +16,8 @@ I figured I'd use my new hammer (the 3D printer) to hammer down this nail.
 As part of the approach to the solution I decided to learn how to use FreeCAD and model both my ultrasonic cleaner and the basket. This turned out to be nothing more than an exercise to teach me the program as I didn't end up using either in my solution part.
 
 {{<carousel
-    delay="5000"
-    max_image_height="400px"
+    delay="0"
+    max_image_height="500px"
     images="/images/ultrasonic-support-with-freecad-2.png, /images/ultrasonic-support-with-freecad-3.png, /images/ultrasonic-support-with-freecad-4.png, /images/ultrasonic-support-with-freecad-5.png, /images/ultrasonic-support-with-freecad-6.png">}}
 
-
+lorem ipsum

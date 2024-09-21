@@ -1,33 +1,22 @@
 <div class="carousel-wrapper" data-delay="{{ .Get "delay" }}">
-    <div class="carousel">
-        {{ $max_image_width := .Get "max_image_width" | default "100%" }}
-        {{ $max_image_height := .Get "max_image_height" | default "auto" }}
-        {{ range (split (.Get "images") ",") }}
-        <div class="carousel-item">
-            <img src="{{ trim . " " }}" alt="Carousel Image" style="width: {{ $max_image_width }}; height: {{ $max_image_height }};">
+    <div class="carousel-main-image">
+        <div class="carousel">
+            {{ $max_image_height := .Get "max_image_height" | default "auto" }}
+            {{ range (split (.Get "images") ",") }}
+            <div class="carousel-item" style="height: {{ $max_image_height }};">
+                <img src="{{ trim . " " }}" alt="Carousel Image" style="max-height: {{ $max_image_height }};">
+            </div>
+            {{ end }}
         </div>
-        {{ end }}
+        <div class="carousel-nav">
+            <button class="carousel-prev">&#10094;</button>
+            <button class="carousel-next">&#10095;</button>
+        </div>
     </div>
-
-    <div class="carousel-nav">
-        <button class="carousel-prev">&#10094;</button>
-        <button class="carousel-next">&#10095;</button>
-    </div>
-
     <div class="carousel-previews">
-        {{ $preview_count := 10 }}
-        {{ $preview_width := "50px" }}
-
-        {{ $has_percent := false }}
-        {{ $has_px := hasSuffix "px" $max_image_width }}
-
-        {{ if ( or $has_px $has_percent false ) }}
-            {{ $preview_width := "100px" }}
-        {{ end }}
-
         {{ range (split (.Get "images") ",") }}
         <div class="preview-item">
-            <img src="{{ trim . " " }}" alt="Preview Image" style="width: {{ $preview_width }};">
+            <img src="{{ trim . " " }}" alt="Preview Image">
         </div>
         {{ end }}
     </div>

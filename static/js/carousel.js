@@ -7,8 +7,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const prev_button = carousel_wrapper.querySelector('.carousel-prev');
         const next_button = carousel_wrapper.querySelector('.carousel-next');
         let current_index = 0;
-        const delay = parseInt(carousel_wrapper.dataset.delay) || 5000;
+        const delay = isNaN(parseInt(carousel_wrapper.dataset.delay)) ? 5000 : parseInt(carousel_wrapper.dataset.delay);
         let auto_slide_interval;
+
+        previews[0].classList.add("active");
 
         function update_carousel(index) {
             carousel_wrapper.querySelector('.carousel').style.transform = `translateX(-${index * 100}%)`;
@@ -19,10 +21,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         function restart_auto_slide() {
             clearInterval(auto_slide_interval);
-            auto_slide_interval = setInterval(() => {
-                current_index = (current_index + 1) % items.length;
-                update_carousel(current_index);
-            }, delay);
+            if (delay != 0)
+            {
+                auto_slide_interval = setInterval(() => {
+                    current_index = (current_index + 1) % items.length;
+                    update_carousel(current_index);
+                }, delay);
+            }
         }
 
         next_button.addEventListener('click', () => {
