@@ -1,0 +1,89 @@
+/* Carousel Wrapper */
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Carousel Images */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    white-space: nowrap;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 50px;
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+    margin: 0;
+}
+
+/* Navigation Arrows */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-nav button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.carousel-nav button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Preview Bar */
+.carousel-previews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.preview-item {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.preview-item img {
+    opacity: 0.5;
+    object-fit: cover; /* Maintain aspect ratio for preview images */
+    border-radius: 5px;
+}
+
+.preview-item img.active {
+    opacity: 1;
+    border: 2px solid #fff;
+}
+
+/* Hide overflowed items */
+.carousel-previews::-webkit-scrollbar {
+    display: none; /* Hides scrollbar */
+}
+
+.carousel-previews {
+    -ms-overflow-style: none;  /* IE 10+ */
+    scrollbar-width: none;  /* Firefox */
+    white-space: nowrap;
+}
+
+.carousel-wrapper {
+    max-width: 100%;
+}
