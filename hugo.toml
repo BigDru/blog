@@ -1,11 +1,11 @@
 baseURL = 'http://blog.dumbrava.ca/'
 languageCode = 'en-us'
-title = 'Dumbrava Tech'
+title = 'Dumbrava'
 theme = 'poison'
 pluralizelisttitles = false   # removes the automatically appended "s" on sidebar entries
 
 [params]
-    brand = "Dumbrava Tech"                      # name of your site - appears in the sidebar
+    brand = "Dumbrava"                      # name of your site - appears in the sidebar
     # brand_image = "/images/test.jpg"    # path to the image shown in the sidebar
     description = "Personal tech blog" # Used as default meta description if not specified in front matter
     dark_mode = true                      # optional - defaults to false
