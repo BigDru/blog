@@ -24,9 +24,11 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
         # URL:          The directory relative to the content directory.
         # HasChildren:  If the directory's files should be listed.  Default is true.
         # Limit:        If the files should be listed, how many should be shown.
+        # External:     external files
     menu = [
-        {Name = "About", URL = "/about/", HasChildren = false},
-        {Name = "Posts", URL = "/posts/", Pre = "Recent", HasChildren = true, Limit = 3},
+        {Name = "About", URL = "/about", HasChildren = false, External = false},
+        {Name = "Posts", URL = "/posts", Pre = "Recent", HasChildren = true, Limit = 3, External = false},
+        {Name = "Portfolio", URL = "/portfolio", HasChildren = false, External = false},
     ]
 
     # Links to your socials.  Comment or delete any you don't need/use.
