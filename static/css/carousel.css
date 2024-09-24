@@ -49,14 +49,14 @@
     justify-content: space-between;
     align-items: center;
     pointer-events: none;
-    padding: 0 10px;
+    padding: 0;
 }
 .carousel-nav button {
     background-color: rgba(0, 0, 0, 0);
     height: 100%;
     color: #ABABAB;
     border: none;
-    padding: 25px;
+    padding: 35px;
     margin: 0;
     cursor: pointer;
     font-size: 30px;
@@ -65,6 +65,7 @@
 }
 .carousel-nav button:hover {
     color: white;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 /* Preview Bar */
 .carousel-previews {
