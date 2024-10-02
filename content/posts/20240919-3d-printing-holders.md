@@ -1,7 +1,6 @@
 ---
 title: "3D Printing Holders for my Ultrasonic Cleaner"
-date: 2024-09-21T08:14:08-05:00
-draft: true
+date: 2024-09-21
 ---
 
 ## Problem
@@ -28,23 +27,41 @@ You can see the sketch of the part in the first image below. I was so confident 
 {{<carousel
     delay="5000"
     max_image_height="500px"
-    images="/images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-2-1.jpg, /images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-2-2.jpg, /images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-2-3.jpg, /images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-2-4.jpg, /images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-2-5.jpg">}}
+    images="/images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-2-1.png, /images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-2-2.png, /images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-2-3.jpg, /images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-2-4.jpg, /images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-2-5.jpg, /images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-2-6.jpg">}}
 
-The first version was much thicker than it needed to be and it would not clip onto the ultrasonic cleaner. I thought the material would be a bit more flexible after it was printed and cured but I realized the design was bad and needed to be improved. I also realized that if I forced the clip on the cleaner, if I ever needed to remove it in the future, I would have a very difficult time. So a better design was required.
+The first version was much thicker than it needed to be and it would not clip onto the ultrasonic cleaner. I thought the material would be a bit more flexible after it was printed and cured but in the end, the design was bad and needed to be improved. I also realized that if I forced the clip on the cleaner and it manages to get on without breaking, I would have a very difficult time removing it if needed.
+
+So I designed a second version. This version was about half as thick in all directions. I also shortened the outside leg so that the clip could actually be mounted onto the cleaner. You can see a comparison of the two in the third image below.
 
 {{<carousel
     delay="5000"
     max_image_height="500px"
     images="/images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-3-1.jpg, /images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-3-2.jpg, /images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-3-3.jpg">}}
 
+The second version, however, did not sit very nicely on the cleaner. I decided to model a third version that had a wider bridge between the two sides. You can see the third version below.
+
 {{<carousel
     delay="5000"
     max_image_height="500px"
     images="/images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-4-1.jpg, /images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-4-2.jpg">}}
 
-{{ <img src="/images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-5-1.jpg> }}
+Then I was worried about the amount of support the clip had from the outside. I decided to add a little notch for the outward extending lip to sit in. This would make the clip actually "clip" into position. I printed and tested out version four. I was quite happy but when I removed it I saw there was a lot of scraping on the outside of the clip.
+
+{{<carousel
+    max_image_height="500px"
+    images="/images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-5-1.jpg">}}
+
+This scraping led me to decide on fully removing the angled wall and just have the clip go straight down. That latch is useful to add tension to the clip so I can remove it from it's notch. I also realized that I had a lot of versions of the clip and had no way of tracking which version was which. So I added a version imprint into the fifth version. I did this by creating the text in the draft workbench, moving the created text into the body and then adding a pocket using the text as a shape.
+
+Going forward, I will add version numbers for all my mechanical printed parts so I don't get confused. I think this is an excellent practice. At my previous workplace we had part numbers imprinted into the parts and the part numbers would change depending on version. I think having both would make sense but I probably don't need to include part numbers until I have at least over 50 parts.
 
 {{<carousel
     delay="5000"
     max_image_height="500px"
-    images="/images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-6-1.jpg, /images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-6-2.jpg">}}
+    images="/images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-6-1.png, /images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-6-2.jpg, /images/20240921-3d-printing-holders-for-my-ultrasonic-cleaner/20240921-6-3.jpg">}}
+
+## Take-away lessons:
+ - Always print a sample first
+ - Realize that it will take multiple revisions to reach a suitable product
+ - Always version your products so you don't get confused
+ - Add part numbers to your products if you have a lot of different parts you manufacture
