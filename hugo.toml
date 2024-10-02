@@ -1,7 +1,7 @@
 baseURL = 'http://blog.dumbrava.ca/'
 languageCode = 'en-us'
 title = 'Dumbrava'
-theme = 'poison'
+theme = 'hugo-theme-poison'
 pluralizelisttitles = false   # removes the automatically appended "s" on sidebar entries
 
 [params]

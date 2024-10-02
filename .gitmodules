@@ -1,0 +1,3 @@
+[submodule "themes/hugo-theme-poison"]
+	path = themes/hugo-theme-poison
+	url = git@github.com:bigdru/hugo-theme-poison
