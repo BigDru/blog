@@ -3,6 +3,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     carousels.forEach(carousel_wrapper => {
         const items = carousel_wrapper.querySelectorAll('.carousel-item');
+
+        if (items.length < 2)
+        {
+            return; // we don't need to do anything for single images
+        }
+
         const previews = carousel_wrapper.querySelectorAll('.preview-item img');
         const prev_button = carousel_wrapper.querySelector('.carousel-prev');
         const next_button = carousel_wrapper.querySelector('.carousel-next');

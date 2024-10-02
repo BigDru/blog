@@ -2,17 +2,21 @@
     <div class="carousel-main-image">
         <div class="carousel">
             {{ $max_image_height := .Get "max_image_height" | default "auto" }}
-            {{ range (split (.Get "images") ",") }}
+            {{ $images := split (.Get "images") "," }}
+            {{ range $i, $image := $images }}
             <div class="carousel-item" style="height: {{ $max_image_height }};">
-                <img src="{{ trim . " " }}" alt="Carousel Image" style="max-height: {{ $max_image_height }};">
+                <img src="{{ trim $image " " }}" alt="Carousel Image" style="max-height: {{ $max_image_height }};">
             </div>
             {{ end }}
         </div>
+        {{ if (gt (len $images) 1) }}
         <div class="carousel-nav">
             <button class="carousel-prev">&#10094;</button>
             <button class="carousel-next">&#10095;</button>
         </div>
+        {{ end }}
     </div>
+    {{ if (gt (len $images) 1) }}
     <div class="carousel-previews">
         {{ range (split (.Get "images") ",") }}
         <div class="preview-item">
@@ -20,4 +24,5 @@
         </div>
         {{ end }}
     </div>
+    {{ end }}
 </div>
