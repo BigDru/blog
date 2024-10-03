@@ -1,4 +1,4 @@
-baseURL = 'http://blog.dumbrava.ca/'
+baseURL = 'https://blog.dumbrava.ca/'
 languageCode = 'en-us'
 title = 'Dumbrava'
 theme = 'hugo-theme-poison'
