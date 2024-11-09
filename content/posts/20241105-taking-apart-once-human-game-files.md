@@ -421,7 +421,7 @@ The rest is relatively easy. Export the mesh file into an obj. Import it into Ch
 
 {{<carousel
     max_image_height="500px"
-    images="/images/20241105-taking-apart-once-human-game-files/taking-apart-once-human-game-files-17-1.png, /images/20241105-taking-apart-once-human-game-files/taking-apart-once-human-game-files-17-2.png, /images/20241105-taking-apart-once-human-game-files/taking-apart-once-human-game-files-17-3.png">}}
+    images="/images/20241105-taking-apart-once-human-game-files/taking-apart-once-human-game-files-17-1.png, /images/20241105-taking-apart-once-human-game-files/taking-apart-once-human-game-files-17-2.jpg, /images/20241105-taking-apart-once-human-game-files/taking-apart-once-human-game-files-17-3.jpg, /images/20241105-taking-apart-once-human-game-files/taking-apart-once-human-game-files-17-4.jpg">}}
 
 ### Disclaimer
 I should mention that I will NOT print / sell this or any other model in the game data (please don't ask). All models are the property of NetEase. I underwent this whole project to give my buddy something they would really love from a game they've already spent way too much money on (imo).
