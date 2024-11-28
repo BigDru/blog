@@ -37,7 +37,7 @@ Looking at our resource files (res_global-normal_pack_1.npk) we can see it indee
 
 We can see the signature is NXPK. Likely for NeoX Package. (I'm using hexcurses if you're curious).
 
-Next, I decided to read the Definitive Guide to Exploring File Formats. This was written in 2004, but I doubt there's been much change since then. This book (60 something pages) has very many useful bits of information that apply specifically to this problem. If you're interested in my notes you can find them [here](https://dumbrava.ca/404).
+Next, I decided to read the Definitive Guide to Exploring File Formats. This was written in 2004, but I doubt there's been much change since then. This book (60 something pages) has very many useful bits of information that apply specifically to this problem. If you're interested in my notes you can find them [here](https://dumbrava.ca/docs/20241128_definitive_guide_to_file_formats_notes.pdf).
 
 The book recommends using Hex Workshop to explore files. This is a Windows only hex reader with a lot of features. So I swapped to my VM.
 

@@ -27,7 +27,6 @@ node_modules/
 Assets/Standard Assets/
 Assets/SampleScenes/
 cmake-build-debug/
-docs/
 .vs
 
 [Ll]ibrary/
