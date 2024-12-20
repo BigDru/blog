@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{ if .Site.Params.light_dark }}
+    {{ partial "light_dark.html" . }}
+{{ end }}
+<h1 class="post-title">Portfolio</h1>
+<div class="portfolio">
+    {{ range .Sections }} <!-- Loop through subcategories -->
+    <div class="portfolio-category">
+        <h2>{{ .Title }}</h2>
+        <div class="portfolio-grid" style="display: flex;">
+            {{ range .Pages }} <!-- Loop through entries in the category -->
+            <a href="{{ .RelPermalink }}">
+                <div class="portfolio-item" style="width: 250px; padding 10px; background: #010101">
+                    <img src="{{ .Params.image }}" alt="{{ .Title }}">
+                    <p style="text-align: center">{{ .Title }}</p>
+                </div>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</div>
+{{ end }}
