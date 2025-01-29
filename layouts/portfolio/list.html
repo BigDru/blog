@@ -4,7 +4,7 @@
 {{ end }}
 <h1 class="post-title">Portfolio</h1>
 <div class="portfolio">
-    {{ range .Sections }} <!-- Loop through subcategories -->
+    {{ range .Sections.Reverse }} <!-- Loop through subcategories -->
     <div class="portfolio-category">
         <h2>{{ .Title }}</h2>
         <div class="portfolio-grid" style="display: flex;">
