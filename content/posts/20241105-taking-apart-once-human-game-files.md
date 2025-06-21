@@ -4,7 +4,7 @@ date: 2024-11-05
 ---
 
 ## Problem
-My buddy's birthday is coming up and he's really gotten into Once Human recently. If you don't know, this is an apocalyptic, zombie shoot and loot game with pet slaves and base building. I played with him for a while and we had a great time!
+My buddy's birthday is coming up and he's really gotten into an online video game called Once Human recently. I played with him for a while and we had a great time!
 
 While considering what to get him for his birthday, I decided that 3D printing a figure from the game would be perfect. However, the game's models are not publically available. So some data mining needs to happen.
 
