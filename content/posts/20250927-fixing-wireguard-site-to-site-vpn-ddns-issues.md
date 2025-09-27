@@ -56,6 +56,8 @@ if ! wg show "$WG_INTERFACE" | grep -q "endpoint.*$current_ip:"; then
     else
         log "ERROR: Failed to restart WireGuard"
     fi
+else
+    log "IP $current_ip matches current peer endpoint, no restart needed"
 fi
 ```
 
